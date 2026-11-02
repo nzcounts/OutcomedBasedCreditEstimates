@@ -1,0 +1,13 @@
+population,recognition_pct,five_year_value_before_spontaneous_adjustment,spontaneous_rate_fixed,credit,uncertainty_low,uncertainty_high,probability_positive_under_model,n_transitions,uncertainty_type
+all,100,3578.5837021875486,0.53,1681.9343400281477,-1250.8851420111644,4666.467182973724,0.869025,690,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"
+all,75,3578.5837021875486,0.53,1261.4507550211108,-938.1638565083733,3499.850387230293,0.869025,690,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"
+all,50,3578.5837021875486,0.53,840.9671700140739,-625.4425710055822,2333.233591486862,0.869025,690,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"
+private,100,3793.6515034824533,0.53,1783.016206636753,-1275.882507877546,4805.619563535135,0.87411,230,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"
+private,75,3793.6515034824533,0.53,1337.2621549775647,-956.9118809081594,3604.214672651351,0.87411,230,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"
+private,50,3793.6515034824533,0.53,891.5081033183765,-637.941253938773,2402.8097817675675,0.87411,230,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"
+Medicare,100,-9295.87449124567,0.53,-4369.061010885464,-10852.270472275162,1941.5836515965925,0.0876,321,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"
+Medicare,75,-9295.87449124567,0.53,-3276.7957581640985,-8139.202854206372,1456.1877386974445,0.0876,321,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"
+Medicare,50,-9295.87449124567,0.53,-2184.530505442732,-5426.135236137581,970.7918257982963,0.0876,321,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"
+Medicaid,100,5622.886639254455,0.53,2642.7567204495936,53.90071136006846,5325.18041958701,0.9772,296,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"
+Medicaid,75,5622.886639254455,0.53,1982.0675403371952,40.425533520051346,3993.8853146902575,0.9772,296,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"
+Medicaid,50,5622.886639254455,0.53,1321.3783602247968,26.95035568003423,2662.590209793505,0.9772,296,"95% model-parameter interval, conditional on fixed spontaneous 53% and transition model"

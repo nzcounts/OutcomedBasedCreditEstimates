@@ -1,0 +1,137 @@
+{
+  "inputs": {
+    "MEPS.zip": "65b1e4bc71e105be5bcb1a65e18505921b0e7d3f133b5e7476b28daa363737a4",
+    "More MEPS.zip": "15f0d113c190588c36cf707c59328f332699c60ad2f4ab0719887a1c82a70de2",
+    "h36u24dta.zip": "7f7fb31b7912169a9baf0d99b2a65cd1d0d03afe6ba26f0c3316f8a7f85e3659"
+  },
+  "sample": {
+    "R_to_P": 0.23738540123965116,
+    "P_to_P": 0.4884411781316796,
+    "unweighted_transitions_RP": [
+      [
+        317,
+        127
+      ],
+      [
+        532,
+        529
+      ]
+    ],
+    "n_fourwave_completers": 4496,
+    "n_index_eligible_before_annual_link": 690,
+    "n_missing_annual_link": 0,
+    "n_index_eligible": 690,
+    "full_unit_roster": 294,
+    "rate_den_weighted": [
+      27528382.29358001,
+      68792083.39963402
+    ],
+    "rate_num_weighted": [
+      6534836.076239999,
+      33600886.26185
+    ]
+  },
+  "design": {
+    "n_psus": 294,
+    "n_strata": 117,
+    "n_multi_psu_strata": 117,
+    "n_singleton_strata": 0,
+    "df_design": 177
+  },
+  "transition_rates": {
+    "R_to_P": 0.23738540123965116,
+    "P_to_P": 0.4884411781316796,
+    "delta_risk": 0.2510557768920284,
+    "95_se_R_to_P": 0.025499182643077885,
+    "95_se_P_to_P": 0.025875078212762876
+  },
+  "cost_and_transition_joint_covariance_matrix_order": [
+    "all",
+    "private",
+    "Medicare",
+    "Medicaid",
+    "R_to_P",
+    "P_to_P"
+  ],
+  "cost_and_transition_joint_corr_matrix": [
+    [
+      1.0,
+      0.3949,
+      0.4379,
+      0.2681,
+      -0.1218,
+      -0.0218
+    ],
+    [
+      0.3949,
+      1.0,
+      -0.0214,
+      -0.0037,
+      -0.1228,
+      -0.2449
+    ],
+    [
+      0.4379,
+      -0.0214,
+      1.0,
+      0.0579,
+      0.0625,
+      -0.0942
+    ],
+    [
+      0.2681,
+      -0.0037,
+      0.0579,
+      1.0,
+      -0.0592,
+      0.1287
+    ],
+    [
+      -0.1218,
+      -0.1228,
+      0.0625,
+      -0.0592,
+      1.0,
+      0.2139
+    ],
+    [
+      -0.0218,
+      -0.2449,
+      -0.0942,
+      0.1287,
+      0.2139,
+      1.0
+    ]
+  ],
+  "eigenvalues_covariance": [
+    0.00047518128294701475,
+    0.0007544923499047218,
+    2425338.884609904,
+    4990112.930857567,
+    8307712.89167446,
+    29198003.81267872
+  ],
+  "exposure_years_discounted": 1.3017825757363608,
+  "discount": 0.03,
+  "spontaneous_remission_rate_policy_input": 0.53,
+  "simulations": 200000,
+  "case_credit_identity_all": true,
+  "same_half_cycle_5_years_no_state_gap": true,
+  "no_intervention_effectiveness_used": true,
+  "no_bipolar_stratification_used": true,
+  "primary_models_converged": true,
+  "rank_model_primary_all": true,
+  "expenditure_year_strictly_after_assessment": true,
+  "cost_source_not_exceed_total_approx": true,
+  "elapsed_sec": 7.595234155654907,
+  "method_limitations": [
+    "PHQ2 proxy not PHQ9 verified remission",
+    "52.999 percent published untreated clinical depression remission may not transfer to PHQ2 transitions",
+    "4-year complete-case cohort and 2018-2022 followup",
+    "5-year extrapolation beyond observed followup",
+    "not causal savings",
+    "observational selection and unmeasured confounding",
+    "spontaneous parameter fixed: uncertainty intervals conditional",
+    "mortality and differential nonresponse unmodeled"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "definition": "Final MEPS-based NPVoC-type fixed remission credit: one primary estimate per payer.\n\nEstimand (model-based): Five future calendar years' spending associated with a\n12-month documented PHQ-2 positive -> negative transition, contrasted against\ncontinued positive status at that landmark, for the baseline screen-positive\npopulation, with future transitions and 3% present value discounting. This is\nnot an identified treatment-caused effect nor PHQ-9 clinical remission.\n\nAnnual 2019--2024 expenditure models: Maryland-core survey-weighted two-part\nbinomial/logit + positive Gamma/log, 2024 dollars, margins standardized to\npeople with current PHQ-2 positive screens and each payer's covered population.\nTwo four-year special panels 2018-21/2019-22 provide subsequent depression\nsymptom-transition rates and full survey design variance. Standard 2-year\npanel transitions are audited independently in the technical appendix.\nSpontaneous remission is a FIXED POLICY RATE of 53% (Whiteford et al., 2013).\nProvider effectiveness and intervention costs are never inputs.\n\nUncertainty includes annual survey stratified-PSU expenditure-model IF and\nlongitudinal survey transition IF, simulated without cross-source covariance.\nCIs are CONDITIONAL on PHQ-2 construct, causal identification, 53% spontaneous\nassumption, fixed 2024 dollars, stationarity, and extrapolation architecture.\n",
+  "sample_n_annual": 77487,
+  "n_annual_screen_positive": 6604,
+  "tr4": {
+    "n_people_fourwave": 4496,
+    "n_recorded_transitions": 1505,
+    "n_postpositive_remitted_transitions": 444,
+    "n_positive_state_transitions": 1061,
+    "counts": [
+      [
+        317,
+        127
+      ],
+      [
+        532,
+        529
+      ]
+    ],
+    "survey": {
+      "n_psu": 294,
+      "n_strata": 117,
+      "n_singleton_strata": 0,
+      "df_design": 177
+    },
+    "p_R_to_P": 0.23738540123965116,
+    "p_P_to_P": 0.4884411781316796,
+    "se_R_to_P": 0.025499182643077885,
+    "se_P_to_P": 0.025875078212762876,
+    "correlation": 0.2139246281454339
+  },
+  "two_year_validation": [
+    {
+      "from_positive": 0,
+      "n_pairs": 27364,
+      "n_next_positive": 1296,
+      "weighted_next_positive": 0.0440715924043221
+    },
+    {
+      "from_positive": 1,
+      "n_pairs": 2430,
+      "n_next_positive": 1166,
+      "weighted_next_positive": 0.4635435743992357
+    }
+  ],
+  "projection_factor": 1.3017825757363608,
+  "projection_per_year": [
+    0.9853292781642932,
+    0.2401675800232992,
+    0.058539279987405615,
+    0.014268567394114647,
+    0.003477870167248269
+  ],
+  "spontaneous_remission_rate": 0.53,
+  "cpi_2024": {
+    "2019": 255.657,
+    "2020": 258.811,
+    "2021": 270.97,
+    "2022": 292.655,
+    "2023": 304.702,
+    "2024": 313.689
+  },
+  "annual_design": {
+    "n_psu": 395,
+    "n_strata": 105,
+    "n_singleton_strata": 0,
+    "df_design": 290
+  },
+  "annual_survey_compatibility": "pooled 2019-2024 VARSTR VARPSU, full PSU roster",
+  "source_sha256": {
+    "MEPS.zip": "65b1e4bc71e105be5bcb1a65e18505921b0e7d3f133b5e7476b28daa363737a4",
+    "More MEPS.zip": "15f0d113c190588c36cf707c59328f332699c60ad2f4ab0719887a1c82a70de2",
+    "h36u24dta.zip": "7f7fb31b7912169a9baf0d99b2a65cd1d0d03afe6ba26f0c3316f8a7f85e3659"
+  },
+  "assumption_warning": "conditional breakeven = P(estimated discount-adjusted valuation >= fixed proposed payment), NOT P(ACO financial surplus)."
+}

@@ -1,0 +1,7 @@
+{
+  "Markov_closed_form_vs_explicit": "passed, 12 parameter cases",
+  "linear_vs_statsmodels_WLS": "passed for all fitted checks",
+  "scaling_100_75_50": "passed",
+  "remission_data_rows": 690,
+  "case_rate_non_causal": true
+}

@@ -1,0 +1,24 @@
+ANNUAL 77487 PSU 395
+HESSIAN All medical expenditures COND 459.3961108578293 864.0220311122567 ZERO 8398
+MODEL All medical expenditures N 77487 targetN 6604 annualDiff 6746 SE 627
+HESSIAN Medicare COND 413.48267603030104 1262.0660179741562 ZERO 1797
+MODEL Medicare N 27468 targetN 2749 annualDiff 8499 SE 972
+HESSIAN Medicaid COND 454.83954444335296 481.44359094126077 ZERO 3101
+MODEL Medicaid N 15033 targetN 2666 annualDiff 3233 SE 572
+HESSIAN Private insurance COND 635.693483665407 1748.2152890262178 ZERO 5696
+MODEL Private insurance N 45768 targetN 2674 annualDiff 3147 SE 592
+PRIMARY TABLE
+                    payer  recognition_pct  signed_model_credit_usd  95_interval_signed_credit_low_usd  95_interval_signed_credit_high_usd  conditional_probability_valuation_exceeds_payment
+All medical expenditures              100              4127.398859                        3335.447009                         4978.051408                                           0.501967
+All medical expenditures               75              3095.549144                        2501.585257                         3733.538556                                           0.994775
+All medical expenditures               50              2063.699429                        1667.723505                         2489.025704                                           1.000000
+                Medicare              100              5199.953366                        4004.797400                         6467.395038                                           0.501317
+                Medicare               75              3899.965025                        3003.598050                         4850.546278                                           0.983642
+                Medicare               50              2599.976683                        2002.398700                         3233.697519                                           0.999992
+                Medicaid              100              1977.912650                        1281.706182                         2703.058398                                           0.502517
+                Medicaid               75              1483.434488                         961.279636                         2027.293798                                           0.917833
+                Medicaid               50               988.956325                         640.853091                         1351.529199                                           0.997600
+       Private insurance              100              1925.521430                        1210.950718                         2664.218139                                           0.500358
+       Private insurance               75              1444.141073                         908.213039                         1998.163604                                           0.905767
+       Private insurance               50               962.760715                         605.475359                         1332.109069                                           0.996217
+COMPLETED seconds 18

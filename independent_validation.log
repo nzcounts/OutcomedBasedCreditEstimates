@@ -1,0 +1,6 @@
+MATH {"all_4_models_converged": true, "credits_checked": 12, "state_matrix_crosschecks": 25, "observed_transition_two_year": [{"from_positive": 0, "n_pairs": 27364, "n_next_positive": 1296, "weighted_next_positive": 0.0440715924043221}, {"from_positive": 1, "n_pairs": 2430, "n_next_positive": 1166, "weighted_next_positive": 0.4635435743992357}], "modelled_postremission_years": 5, "nonnegative_credits": true, "conditional_breakeven_not_ACO_breakeven": true}
+INDEPENDENT All medical expenditures PPML 7222 PRIMARY 6746
+INDEPENDENT Medicare PPML 8071 PRIMARY 8499
+INDEPENDENT Medicaid PPML 3345 PRIMARY 3233
+INDEPENDENT Private insurance PPML 3064 PRIMARY 3147
+VALIDATION_FINISHED

@@ -1,0 +1,43 @@
+document,paragraph_index,text_excerpt,reference_numbers,reference_keys
+main,5,"Achieving remission is a central objective of depression care, yet payment arrangements commonly recognize medical spending within a single performanc",1,counts
+main,6,Maryland’s CMS-approved diabetes outcomes-based credit offers a related precedent: an actuarial valuation of a population-health outcome can be used i,"2,3,4","maryland,cmmiletter,cms370"
+main,7,"The policy question is deliberately narrow: what fixed dollar amount could be attached to one documented remission, regardless of the intervention use","1,2","counts,maryland"
+main,10,We combined pooled 2019-2024 MEPS full-year consolidated expenditure files with two special four-year longitudinal MEPS panels covering 2018-2021 and ,"5,6,7,8","meps24,meps23,meps24long,mepspooled"
+main,12,"Current depressive symptoms were defined by PHQ-2 score of at least 3. The policy outcome was remission at approximately 12 months, operationalized in","9,10,4","phq2,phq9,cms370"
+main,13,"For each payer, we estimated the difference in annual medical expenditures associated with positive vs negative symptom-screen states using Maryland-s","2,11,12,13,14,15,16,17","maryland,manning1987,manning2001,buntin,basu,graubard,muller,bls"
+main,15,The five-year valuation began after the approximately 12-month remission assessment. Longitudinal MEPS transitions projected how symptom-screen differ,"18,19,20,21,22","sonnenberg,solomon,burcusa,sanders,whiteford"
+main,17,"Models incorporated MEPS sampling weights, strata, and primary sampling units. Ninety-five percent annual spending confidence intervals were based on ","23,24","lumley,briggs"
+main,23,Note: Predictions were standardized to the covariate distribution of individuals with positive PHQ-2 screens in each payer population; symptom-screen-,"16,9","muller,phq2"
+main,25,"The longitudinal analysis included 4,496 complete four-wave participants. The weighted annual probability of remaining positive was 48.8%, while the p","18,19","sonnenberg,solomon"
+main,30,Note: UI indicates a model-based uncertainty interval conditional on the 53% spontaneous-remission assumption and specified expenditure/transition mod,24,briggs
+main,32,All four primary two-part expenditure models converged. An independent single-part Poisson pseudo-maximum-likelihood model produced annual contrasts o,"25,13","santos,buntin"
+main,35,"The policy design separates the clinical outcome from the actuarial price. Once the rate is set, the same credit applies to each qualifying remission,","1,2","counts,maryland"
+main,36,The distinction between valuing remission and financing a program is consequential. The conditional threshold probabilities in Table 2 describe uncert,"24,3","briggs,cmmiletter"
+main,38,The analysis used PHQ-2 symptom-screen resolution rather than the PHQ-9-defined clinical remission required by CMS Quality ID 370. Annual expenditure ,"4,9,26,27","cms370,phq2,strobe,cheers"
+main,40,"A nationally standardized, five-year outcomes-based credit for depression symptom resolution can be estimated from MEPS without modeling intervention ","1,2,22","counts,maryland,whiteford"
+main,42,"MEPS public-use data are distributed by AHRQ. Reproducibility code, summary results, and diagnostic checks are provided in the accompanying online sup","5,8","meps24,mepspooled"
+supplement,4,"MEPS annual data comprised 2019-2024 full-year consolidated files: 2019 HC-216, 2020 HC-224, 2021 HC-233, 2022 HC-243, 2023 HC-251, and 2024 HC-256 (o","1,2,3,4","meps24,meps23,meps24long,mepspooled"
+supplement,5,"Adults aged 18-85 years were eligible for expenditure modeling when PHQ-2 was 0-6, SAQ weight was positive, age and core covariates were in valid rang","5,6,7","phq2,cms370,phq9"
+supplement,6,"Annual spending outcomes were total medical expenditures and separately Medicare-paid, Medicaid-paid, and private-insurer-paid amounts. For each payer","1,4","meps24,mepspooled"
+supplement,9,"The final annual sample had 77,487 person-years (6,604 positive). Annual analysis used the SAQWTxxF questionnaire-specific weights, pooled VARSTR and ",4,mepspooled
+supplement,11,"For each payer p and person-year i, let Y_ip be nonnegative annual expenditures and D_i indicate PHQ-2 positive status. The marginal expenditure mean ","8,9,10,11,12","maryland,manning1987,manning2001,buntin,basu"
+supplement,12,"Core adjustment terms (consistent with the Maryland expenditure method) were age centered at 50 and scaled by 20, its square, sex, race, poverty categ","8,10","maryland,manning2001"
+supplement,13,"For each payer, marginal standardization averaged two predictions over the weighted covariate distribution of PHQ-2-positive adults in the payer domai","13,14","graubard,muller"
+supplement,14,The influence-function variance accounted for variation in both fitted generalized linear models and the composition of the standardized target popula,"15,13,4","lumley,graubard,mepspooled"
+supplement,19,"The four-year longitudinal data required complete PHQ-2 across four annual waves (PHQ22, PHQ24, PHQ26, PHQ28), valid core demographic/insurance variab","2,3,16,17,18","meps23,meps24long,solomon,burcusa,sonnenberg"
+supplement,20,Estimated survey-weighted transition probabilities were a=Pr(P next year | R now)=0.2373854 and b=Pr(P next year | P now)=0.4884412. Remission and per,18,sonnenberg
+supplement,21,"With 3% annual real discounting at the midpoint of each future year, the five-year discounted exposure multiplier is F = sum from k=1 to 5 of (b-a)^(k",19,sanders
+supplement,26,"Independent standard two-year panel check: among 2,430 positive-screen paired observations, 1,166 screened positive at the next observation; the surve",4,mepspooled
+supplement,28,"For each payer p, the unadjusted five-year value was V_p = Delta_p F. The fixed spontaneous-remission rate was s=0.53, from Whiteford et al. (2013), a","20,21,8","whiteford,counts,maryland"
+supplement,29,The 53% factor is a standardized pricing rule and must not be interpreted as an empirically identified causal-attribution fraction among observed remi,20,whiteford
+supplement,30,"The simulation drew 120,000 replicates from a multivariate normal distribution for the four annual expenditure contrasts, preserving their cross-payer","22,15","briggs,lumley"
+supplement,31,"For each alpha, the reported conditional threshold probability equals the fraction of simulated spontaneous-remission-adjusted valuations satisfying B",22,briggs
+supplement,37,"Validation checked unique person-year keys, positive/negative payment signs, payer components relative to total expenditures, source SHA-256 hashes, a","10,11","manning2001,buntin"
+supplement,38,A separate single-part PPML log-link model with identical adjustment variables and target standardization was fit to verify that annual contrast estim,"23,11","santos,buntin"
+supplement,44,"The principal estimate is an adjusted contrast in annual expenditures across symptom-screen states, followed by a projected five-year state-duration c","14,20,22","muller,whiteford,briggs"
+supplement,45,The model includes all medical expenditures (or amounts paid by each insurer) after the remission landmark in an expected-state valuation. It does not,"21,19","counts,sanders"
+supplement,46,"The proposed measurement mechanism in CMS care models would use actual Quality ID #370 clinical remission, with an eligible depression diagnosis, base","6,5,7","cms370,phq2,phq9"
+supplement,47,"From an actuarial standpoint, the main strengths are large national annual expenditure samples, payer-specific estimation, transparent standardized pr","24,25","cheers,strobe"
+supplement,49,The policy proposal would use the CMS remission measure for payment qualification. The empirical valuation dataset approximates its symptom transition,"6,5,7","cms370,phq2,phq9"
+supplement,53,"A companion reproducibility archive contains code/run_final.py (annual two-part models; standardization; state transitions; credits), code/enhanced_lo","26,27,28","seabold,virtanen,harris"
+supplement,57,"Published input data: AHRQ MEPS Full-Year Consolidated and longitudinal files. Reference methods: Maryland HSCRC approved diabetes credit, CMS Quality","8,6,20,29,30","maryland,cms370,whiteford,bls,cmmiletter"

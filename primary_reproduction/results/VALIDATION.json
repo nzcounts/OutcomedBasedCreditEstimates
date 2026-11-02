@@ -1,0 +1,59 @@
+{
+  "math_checks": {
+    "all_4_models_converged": true,
+    "credits_checked": 12,
+    "state_matrix_crosschecks": 25,
+    "observed_transition_two_year": [
+      {
+        "from_positive": 0,
+        "n_pairs": 27364,
+        "n_next_positive": 1296,
+        "weighted_next_positive": 0.0440715924043221
+      },
+      {
+        "from_positive": 1,
+        "n_pairs": 2430,
+        "n_next_positive": 1166,
+        "weighted_next_positive": 0.4635435743992357
+      }
+    ],
+    "modelled_postremission_years": 5,
+    "nonnegative_credits": true,
+    "conditional_breakeven_not_ACO_breakeven": true
+  },
+  "PPML_tab": [
+    {
+      "payer": "All medical expenditures",
+      "two_part_primary": 6745.903550541368,
+      "single_part_PPML_validation": 7221.576001355086,
+      "difference_PPML_vs_primary": 475.67245081371857,
+      "PPML_positive": true,
+      "n_fit": 77487
+    },
+    {
+      "payer": "Medicare",
+      "two_part_primary": 8498.908168181651,
+      "single_part_PPML_validation": 8071.457793025148,
+      "difference_PPML_vs_primary": -427.45037515650347,
+      "PPML_positive": true,
+      "n_fit": 27468
+    },
+    {
+      "payer": "Medicaid",
+      "two_part_primary": 3232.740141407565,
+      "single_part_PPML_validation": 3345.3241537664394,
+      "difference_PPML_vs_primary": 112.58401235887459,
+      "PPML_positive": true,
+      "n_fit": 15033
+    },
+    {
+      "payer": "Private insurance",
+      "two_part_primary": 3147.110879283688,
+      "single_part_PPML_validation": 3064.1268195598905,
+      "difference_PPML_vs_primary": -82.9840597237976,
+      "PPML_positive": true,
+      "n_fit": 45768
+    }
+  ],
+  "ppml_purpose": "Independent expenditure mean check only, not used to choose credit"
+}

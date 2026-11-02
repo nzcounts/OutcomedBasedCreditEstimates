@@ -1,0 +1,19 @@
+loaded 690 transitions [0.2373854  0.48844118]
+primary all n 690 delta 2749 se 2448 CI -2082 7580
+primary private n 230 delta 2914 se 2547 CI -2113 7941
+primary Medicare n 321 delta -7141 se 5270 CI -17542 3260
+primary Medicaid n 296 delta 4319 se 2159 CI 58 8581
+FINAL CREDITS population  recognition_pct  five_year_value_before_spontaneous_adjustment  spontaneous_rate_fixed   credit  uncertainty_low  uncertainty_high  probability_positive_under_model  n_transitions                                                                        uncertainty_type
+       all              100                                        3578.58                    0.53  1681.93         -1250.89           4666.47                              0.87            690 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+       all               75                                        3578.58                    0.53  1261.45          -938.16           3499.85                              0.87            690 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+       all               50                                        3578.58                    0.53   840.97          -625.44           2333.23                              0.87            690 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+   private              100                                        3793.65                    0.53  1783.02         -1275.88           4805.62                              0.87            230 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+   private               75                                        3793.65                    0.53  1337.26          -956.91           3604.21                              0.87            230 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+   private               50                                        3793.65                    0.53   891.51          -637.94           2402.81                              0.87            230 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+  Medicare              100                                       -9295.87                    0.53 -4369.06        -10852.27           1941.58                              0.09            321 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+  Medicare               75                                       -9295.87                    0.53 -3276.80         -8139.20           1456.19                              0.09            321 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+  Medicare               50                                       -9295.87                    0.53 -2184.53         -5426.14            970.79                              0.09            321 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+  Medicaid              100                                        5622.89                    0.53  2642.76            53.90           5325.18                              0.98            296 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+  Medicaid               75                                        5622.89                    0.53  1982.07            40.43           3993.89                              0.98            296 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+  Medicaid               50                                        5622.89                    0.53  1321.38            26.95           2662.59                              0.98            296 95% model-parameter interval, conditional on fixed spontaneous 53% and transition model
+DONE 7.599703788757324

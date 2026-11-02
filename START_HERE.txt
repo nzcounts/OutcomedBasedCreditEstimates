@@ -1,0 +1,12 @@
+MEPS Depression Remission - METHODS/IMPLEMENTATION AUDIT
+
+Read METHODS_TO_CODE_AUDIT.md first.
+
+AUDITED_CORRECTED_Main_Article and AUDITED_CORRECTED_Technical_Supplement contain corrected descriptions of what was actually estimated. The numbers in the model-based rate card have not been changed.
+
+primary_reproduction contains the exact final Python code, all output CSV/JSON files independently regenerated from the original 3 MEPS input ZIP files, and instructions.
+prior_prospective_reproduction contains the separately executed earlier postassessment remitter-versus-persister expenditure analysis, whose Medicare estimate was negative and imprecise. It was not used to set the final positive primary rate card.
+
+No respondent-level data files are included. Replication requires MEPS.zip, More MEPS.zip, and h36u24dta.zip with checksums in primary_reproduction/SOURCE_DATA_SHA256.txt.
+
+This is a computational audit, not external statistical peer review or CMS approval.
