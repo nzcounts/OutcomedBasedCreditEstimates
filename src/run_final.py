@@ -1,25 +1,15 @@
 #!/usr/bin/env python3
-"""Final MEPS-based NPVoC-type fixed remission credit: one primary estimate per payer.
+"""MEPS PHQ-2 symptom-state expenditure valuation under a fixed policy scenario.
 
-Estimand (model-based): Five future calendar years' spending associated with a
-12-month documented PHQ-2 positive -> negative transition, contrasted against
-continued positive status at that landmark, for the baseline screen-positive
-population, with future transitions and 3% present value discounting. This is
-not an identified treatment-caused effect nor PHQ-9 clinical remission.
-
-Annual 2019--2024 expenditure models: Maryland-core survey-weighted two-part
-binomial/logit + positive Gamma/log, 2024 dollars, margins standardized to
-people with current PHQ-2 positive screens and each payer's covered population.
-Two four-year special panels 2018-21/2019-22 provide subsequent depression
-symptom-transition rates and full survey design variance. Standard 2-year
-panel transitions are audited independently in the technical appendix.
-Spontaneous remission is a FIXED POLICY RATE of 53% (Whiteford et al., 2013).
-Provider effectiveness and intervention costs are never inputs.
-
-Uncertainty includes annual survey stratified-PSU expenditure-model IF and
-longitudinal survey transition IF, simulated without cross-source covariance.
-CIs are CONDITIONAL on PHQ-2 construct, causal identification, 53% spontaneous
-assumption, fixed 2024 dollars, stationarity, and extrapolation architecture.
+Annual 2019-2024 cross-sectional two-part expenditure contrasts are standardized
+to currently screen-positive adults in each payer population, in 2024 dollars.
+Four-wave screen transitions inform five hypothetical future annual state rewards.
+The negative state includes previously positive people beyond their first negative
+screen. A clinical 12-month remission landmark is a projection assumption.
+The model applies 3% midyear discounting and a fixed 53% policy adjustment.
+Annual and transition covariance are simulated without cross-source covariance,
+despite overlapping respondents. The two-year and PPML checks reuse source data.
+These are conditional valuations, not identified clinical-remission savings.
 """
 from __future__ import annotations
 import os,io,zipfile,hashlib,json,math,warnings,time,sys
@@ -30,9 +20,9 @@ from scipy.special import expit
 from scipy.stats import t as student_t
 from patsy import dmatrix
 from enhanced_loader import load_extended,read_aux
-ROOT=Path(os.environ.get('MEPS_DATA_DIR','/mnt/data'))
+ROOT=Path(os.environ.get('MEPS_DATA_DIR',str(Path(__file__).resolve().parents[1]/'data'/'raw')))
 BASE=Path(__file__).resolve().parents[1]
-OUT=BASE/'results';OUT.mkdir(exist_ok=True)
+OUT=Path(os.environ.get('MEPS_OUTPUT_DIR',str(BASE/'results'/'primary')));OUT.mkdir(parents=True,exist_ok=True)
 CPI={2019:255.657,2020:258.811,2021:270.970,2022:292.655,2023:304.702,2024:313.689}
 YEAR_FILES={2019:'h216dta.zip',2020:'h224dta.zip',2021:'h233dta.zip',2022:'h243dta.zip',2023:'h251dta.zip',2024:'h256dta.zip'}
 PAYS={'All medical expenditures':('total','ever_private'),
@@ -225,7 +215,7 @@ def longitudinal_4wave():
       'se_R_to_P':float(np.sqrt(vi[0,0])),'se_P_to_P':float(np.sqrt(vi[1,1])),'correlation':float(vi[0,1]/np.sqrt(vi[0,0]*vi[1,1]))}
 
 def two_year_audit(a):
- """Annual-year PHQ2 within standard two-year panels: descriptive independent check.
+ """Annual-year PHQ2 within standard two-year panels: descriptive check with overlapping samples.
  Does not use annual MEPS expenditure during the year remission was documented
  as downstream outcome. Transition estimates are not substituted for the primary
  four-year recurrence model because standard-panel weights do not adjust for
@@ -247,8 +237,8 @@ def two_year_audit(a):
 
 def projection(rates,years=5):
  """Five years STARTING AFTER 12-month remission landmark (not treatment year).
- At the beginning of year 1, the two otherwise matched persons have states P
- and R. Expected exposure difference in years j=1,...,5 is q**(j-1), with
+ At the beginning of projected year 1, two hypothetical trajectories have states P
+ and R; no matched-person comparison is estimated. Expected exposure difference in years j=1,...,5 is q**(j-1), with
  q = P(P->P)-P(R->P). Returns mid-year discounted annual state-year units.
  Within-year PHQ transitions are unobserved; annual state-reward convention.
  """

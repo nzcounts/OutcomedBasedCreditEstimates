@@ -6,7 +6,7 @@ from __future__ import annotations
 import io,zipfile,os
 from pathlib import Path
 import pandas as pd, numpy as np
-ROOT=Path(__import__('os').environ.get('MEPS_DATA_DIR','/mnt/data'))
+ROOT=Path(os.environ.get('MEPS_DATA_DIR',str(Path(__file__).resolve().parents[1]/'data'/'raw')))
 ADDITIONAL=ROOT/'More MEPS.zip'
 SPECIAL={2018:'h236dta.zip',2019:'h245dta (1).zip'}
 CONDITIONS={2019:'h214dta.zip',2020:'h222dta.zip',2021:'h231dta.zip',2022:'h241dta.zip',2023:'h249dta.zip',2024:'h255dta.zip'}

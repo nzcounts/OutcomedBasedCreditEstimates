@@ -1,7 +1,8 @@
 import sys
 import numpy as np
 import pandas as pd
-sys.path.insert(0,'/mnt/data/MEPS_final_NPVoC_2026-10-28/code')
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from run_final import annual_data
 from enhanced_loader import load_extended
 A,_=annual_data()
